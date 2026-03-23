@@ -1,0 +1,103 @@
+body{
+  background:#f0a13a;
+  font-family: Arial, sans-serif;
+}
+
+/* Calculator body */
+.phone{
+  width:300px;
+  margin:60px auto;
+  background:black;
+  padding:20px;
+  border-radius:30px;
+
+  /* glowing border */
+  border:2px solid #f1a33c;
+  box-shadow:0 0 10px #f1a33c,
+             0 0 20px #f1a33c,
+             0 0 40px #f1a33c;
+
+  animation:glow 2s infinite alternate;
+}
+
+/* glow animation */
+@keyframes glow{
+  from{
+    box-shadow:0 0 10px #f1a33c,
+               0 0 20px #f1a33c;
+  }
+  to{
+    box-shadow:0 0 20px #f1a33c,
+               0 0 40px #f1a33c,
+               0 0 60px #f1a33c;
+  }
+}
+
+/* screen */
+.screen{
+  color:white;
+  font-size:45px;
+  text-align:right;
+  margin-bottom:20px;
+  padding:10px;
+  border-bottom:2px solid #333;
+}
+
+/* buttons grid */
+.buttons{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+}
+
+/* buttons */
+button{
+  height:60px;
+  border-radius:50%;
+  border:none;
+  font-size:22px;
+  background:#333;
+  color:white;
+  cursor:pointer;
+  transition:0.25s;
+}
+
+/* hover effect */
+button:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 10px white;
+}
+
+/* click animation */
+button:active{
+  transform:scale(0.95);
+}
+
+/* operator buttons */
+.orange{
+  background:#f1a33c;
+}
+
+/* operator hover glow */
+.orange:hover{
+  box-shadow:0 0 15px #f1a33c,
+             0 0 30px #f1a33c;
+}
+
+/* gray buttons */
+.gray{
+  background:#a5a5a5;
+  color:black;
+}
+
+.gray:hover{
+  box-shadow:0 0 10px white;
+}
+
+/* zero button */
+.zero{
+  grid-column:span 2;
+  border-radius:40px;
+  text-align:left;
+  padding-left:25px;
+}
